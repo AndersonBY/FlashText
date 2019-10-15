@@ -2,7 +2,7 @@
 # @Author: Anderson
 # @Date:   2019-04-18 15:53:34
 # @Last Modified by:   Anderson
-# @Last Modified time: 2019-06-19 14:45:26
+# @Last Modified time: 2019-10-15 13:59:44
 print('Importing library. Please wait.')
 import librosa
 from moviepy.editor import TextClip, CompositeVideoClip, AudioFileClip
@@ -37,9 +37,9 @@ def main(width, height, text, music, word_split, output):
 
 	clips = []
 	for index, beat_time in enumerate(beat_times[:-1]):
-		print(f'{index + 1}/{len(beat_times)}——{word_list[index]}')
 		if index >= len(word_list):
 			break
+		print(f'{index + 1}/{len(beat_times)}——{word_list[index]}')
 		text_clip = TextClip(
 			word_list[index],
 			fontsize=width // 8,
